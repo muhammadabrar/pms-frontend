@@ -164,8 +164,6 @@ export default function Example() {
             </>
           )}
         </Disclosure>
-
-
         <main>
           <div className="min-h-screen bg-slate-100">
             {/* Replace with your content */}
