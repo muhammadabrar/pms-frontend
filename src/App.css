@@ -1,0 +1,82 @@
+:root {
+  --purple: #7700b3;
+  --lightGreen: #00b300;
+  --green: #007d00;
+  --purple2: #54007d;
+  --brown: #b36b00;
+  --purple-100: #ebd9f4;
+  --green-100: #ccf0cc;
+  --brown-100: #f4e9d9;
+  --brown-400: #e6a84cc4;
+/* color: #d77600; */
+}
+
+.text-green {
+  color: var(--green);
+}
+
+.text-purple {
+  color: var(--purple);
+}
+.text-lightGreen {
+  color: var(--lightGreen);
+}
+.text-purple2 {
+  color: var(--purple2);
+}
+.text-brown {
+  color: var(--brown);
+}
+.text-purple-100 {
+  color: var(--purple-100);
+}
+.text-green-100 {
+  color: var(--green-100);
+}
+.text-brown-100 {
+  color: var(--brown-100);
+}
+
+.text-brown-400 {
+  color: var(--brown-400);
+}
+.bg-brown-400 {
+  background-color: var(--brown-400);
+}
+
+.bg-green {
+  background-color: var(--green);
+}
+
+.bg-purple {
+  background-color: var(--purple);
+}
+.bg-lightGreen {
+  background-color: var(--lightGreen);
+}
+.bg-purple2 {
+  background-color: var(--purple2);
+}
+.bg-brown {
+  background-color: var(--brown);
+}
+.bg-purple-100 {
+  background-color: var(--purple-100);
+}
+.bg-green-100 {
+  background-color: var(--green-100);
+}
+.bg-brown-100 {
+  background-color: var(--brown-100);
+}
+
+.shadow {
+  box-shadow: 0 0px 16px 0 rgb(0 0 0 / 5%);
+}
+
+.Dep-menu-btn{
+  position: absolute;
+  top: 0 ;
+  right: 0;
+  width: 100%;
+}

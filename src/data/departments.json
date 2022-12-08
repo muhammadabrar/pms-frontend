@@ -1,0 +1,8 @@
+[{"id":1,"department":"Sales","manager":"Sidnee Revan","success_rating":84},
+{"id":2,"department":"Services","manager":"Alister Wahlberg","success_rating":92},
+{"id":3,"department":"Product Management","manager":"Rex Turbitt","success_rating":79},
+{"id":4,"department":"Engineering","manager":"Erl Harme","success_rating":92},
+{"id":5,"department":"Human Resources","manager":"Ulrike Chasemore","success_rating":60},
+{"id":6,"department":"Support","manager":"Marilee Gimblet","success_rating":30},
+{"id":7,"department":"Research and Development","manager":"Jena Fellgett","success_rating":75},
+{"id":8,"department":"Sales","manager":"Lianna Sans","success_rating":71}]

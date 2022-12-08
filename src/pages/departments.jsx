@@ -1,13 +1,11 @@
 import React from "react";
 import DepartmentCard from "../components/DepartmentCard";
-import States from "../components/states";
-import Welcome from "../components/welcome";
 import departments from "../data/departments.json";
-const Dashboard = () => {
+
+
+const Departments = () => {
   return (
-    <div className="bg-slate-100 rounded-tl-xl h-full flex-grow p-6 px-11">
-      <Welcome />
-      <States />
+    <div data-aos="fade-left" className="bg-slate-50 shadow-inner  rounded-l-xl h-full flex-grow p-6 px-11 ">
       <div className="flex justify-between items-center p-5 bg-purple text-white rounded-xl">
         <h1 className="card-title">Departments</h1>
         <button className="btn btn-purple flex items-center">
@@ -30,13 +28,12 @@ const Dashboard = () => {
       </div>
       <div className="grid my-6 gap-4 xl:grid-cols-4 2xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 ">
         {departments.map((data, i) => (
-          <DepartmentCard data={data} key={i} />
+          <DepartmentCard data={data} key={i} delay={i * 100}/>
         ))}
         
       </div>
-      
     </div>
   );
 };
 
-export default Dashboard;
+export default Departments;

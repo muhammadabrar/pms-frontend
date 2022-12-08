@@ -1,21 +1,18 @@
 import React from "react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import AssignmentIcon from "@mui/icons-material/Assignment";
-import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
 const States = () => {
   return (
-    <div className="my-6">
+    <div className="states">
       <div className="flex justify-between">
-        <div className=" bg-white shadow rounded-xl w-full mr-6">
-          <a
-            href="#"
-            className="flex p-4 items-start justify-between border-b pb-2 border-gray-700"
-          >
+        <div className=" bg-purple shadow-lg hover:shadow-purple-500 rounded-xl w-full mr-6">
+          <a href="#" className="flex p-4 items-start justify-between">
             <div>
-              <h1 className="text-3xl text-black font-bold">12</h1>
-              <p className="font-bold text-sm text-gray-500">Employees</p>
+              <h1 className="text-3xl text-white font-bold">12</h1>
+              <p className="font-semibold text-sm text-gray-100">Employees</p>
             </div>
-            <div className="p-4 mr-4 rounded-full bg-purple-100 text-purple ">
+            <div className="p-4 mr-4 rounded-full bg-purple-400 text-white ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -32,88 +29,28 @@ const States = () => {
               </svg>
             </div>
           </a>
-
-          <div className="py-2 px-4 text-end">
-            <a href="#" className="inline-flex">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6 mr-2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 4.5v15m7.5-7.5h-15"
-                />
-              </svg>
-              Add Employee
-            </a>
-          </div>
         </div>
-        <div className=" bg-white shadow rounded-xl w-full mr-6">
-          <div className="flex p-4 items-start justify-between border-b pb-2 border-gray-700">
+        <div className=" bg-brown shadow-lg hover:shadow-orange-800 rounded-xl w-full mr-6">
+          <a href="#" className="flex p-4 items-start justify-between pb-2 ">
             <div>
-              <h1 className="text-3xl text-black font-bold">10</h1>
-              <p className="font-bold text-sm text-gray-500">emploayes</p>
+              <h1 className="text-3xl text-white font-bold">10</h1>
+              <p className="font-bold text-sm text-gray-100">Tasks</p>
             </div>
-            <div className="p-4 mr-4 rounded-full bg-brown-100 text-brown ">
+            <div className="p-4 mr-4 rounded-full bg-brown-400 text-white ">
               <AssignmentIcon />
             </div>
-          </div>
-
-          <div className="py-2 px-4 text-end">
-            <a href="#" className="inline-flex">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6 mr-2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 4.5v15m7.5-7.5h-15"
-                />
-              </svg>
-              Add Task
-            </a>
-          </div>
+          </a>
         </div>
-        <div className=" bg-white shadow rounded-xl w-full mr-4">
-          <div className="flex p-4 items-start justify-between border-b pb-2 border-gray-700">
+        <div className=" bg-green shadow-lg hover:shadow-green-500 rounded-xl w-full ">
+          <a href="#" className="flex p-4 items-start justify-between ">
             <div>
-              <h1 className="text-3xl text-black font-bold">05</h1>
-              <p className="font-bold text-sm text-gray-500">Managers</p>
+              <h1 className="text-3xl text-white font-bold">05</h1>
+              <p className="font-bold text-sm text-gray-100">Managers</p>
             </div>
-            <div className="p-4 mr-4 rounded-full bg-green-100 text-green ">
-            <AssignmentIndIcon/>
+            <div className="p-4 mr-4 rounded-full bg-green-400 text-white ">
+              <AssignmentIndIcon />
             </div>
-          </div>
-
-          <div className="py-2 px-4 text-end">
-            <a href="#" className="inline-flex">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6 mr-2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 4.5v15m7.5-7.5h-15"
-                />
-              </svg>
-              Add Managers
-            </a>
-          </div>
+          </a>
         </div>
       </div>
     </div>

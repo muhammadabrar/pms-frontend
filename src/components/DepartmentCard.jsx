@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { Button, CardHeader, IconButton } from "@mui/material";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-const DepartmentCard = () => {
+import Chart from "react-apexcharts";
+import RadialBar from "./radialBar";
+const DepartmentCard = ({ data, delay }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -14,43 +12,27 @@ const DepartmentCard = () => {
   };
 
   return (
-    <div className="dep-card shadow rounded-lg divide-y">
-      <CardHeader
-        title="Department Name"
-        action={
-          <IconButton
-            id="Dep-menu-btn"
-            aria-controls={open ? "basic-menu" : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? "true" : undefined}
-            onClick={handleClick}
-          >
-            <MoreVertIcon />
-          </IconButton>
-        }
-      />
-      <p className="p-3">
-        <b>2</b> Employees
-      </p>
-      <p className="p-3">
-        <b>Manager</b> Shayan Sir
-      </p>
-      <p className="p-3">
-        <b>4</b> Task Added
-      </p>
-      <Menu
-        id="dep-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
-      >
-        <MenuItem onClick={handleClose}>Add Task</MenuItem>
-        <MenuItem onClick={handleClose}>Edit</MenuItem>
-        <MenuItem onClick={handleClose} ><p className='text-red-800 '>Delete</p></MenuItem>
-      </Menu>
+    <div
+      data-aos="zoom-in-up"
+      data-aos-offset="220"
+      data-aos-delay={delay}
+      className="relative bg-white border hover:shadow-xl rounded-xl"
+    >
+      <div className="cardBody">
+        <RadialBar success_rating={data?.success_rating} />
+        <a
+          href={`/departments/department/${data.id}`}
+          className="text-lg font-bold hover:text-purple-600 dep-title"
+        >
+          {data?.department}
+        </a>
+        <h1 className="font-semibold leading-6">{data?.manager}</h1>
+        <div className="bg-gray-200 hover:bg-white border-t mt-4 w-full rounded-b-xl">
+          <a href={`/departments/department/${data.id}`}>
+            <button className="w-full p-2">More</button>
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

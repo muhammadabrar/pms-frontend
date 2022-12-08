@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.card {
+  background: #fff;
+  box-shadow: 0 0px 16px 0 rgb(0 0 0 / 5%);
+  border-radius: 1rem;
+}
+.card-header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: #eee 1px solid;
+}
+.card-title {
+  font-weight: 600;
+  font-size: 20px;
+}
+.card-body {
+  padding: 1rem;
+}
+
+.task-date {
+  width: 85px;
+  height: 85px;
+}
+.task-detail {
+  position: relative;
+}
+
+.progress {
+  position: absolute;
+  text-align: end;
+  top: 0;
+  bottom: 0;
+  opacity: 0.5;
+}
+.detail {
+  z-index: 3;
+}
+.sideBar,
+.top-sideBar {
+  min-width: 250px;
+}
+
+.menu-btn {
+  margin-right: 1rem;
+}
+// .app-title{
+//   p{
+//     margin: 0;
+//     padding: 0;
+//     line-height: 1rem;
+//   }
+// }
+// .page-title{
+//   h1{
+//     margin: 0;
+//     padding: 0;
+//     line-height: 1rem;
+//     font-weight: 700;
+//   }
+// }
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.sidebar-content {
+  position: fixed;
+}
+
+.links {
+  margin: 5rem 0;
+}
+
+.link-item {
+  margin: 2rem 0;
+}
+.welcome-img{
+  position: absolute;
+  top: -80%; 
+  right: 2rem;
+}
+
+.states{
+  margin: 4rem 0;
+}
+
+.btn {
+  @apply font-bold transition duration-300 ease-in-out py-2 px-4 rounded;
+}
+
+.btn-sm {
+  @apply text-sm font-semibold transition duration-300 ease-in-out py-1 px-1 rounded;
+}
+.btn-report{
+  @apply bg-white border border-purple-400 text-purple-700;
+
+}
+.btn-purple {
+  @apply bg-white text-gray-700;
+}
+.btn-report:hover, .btn-purple:hover {
+  @apply bg-purple-400 text-white hover:shadow-purple-500;
+}
+
+.radialBar{
+  width: 100%;
+}
+.cardBody{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dep-title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; 
+  line-clamp: 1;
+  width: max-content;
+min-width: min-content;
+  -webkit-box-orient: vertical;
+}
+.description-sm{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  line-clamp: 3;
+min-width: min-content;
+  -webkit-box-orient: vertical;
+}
+
+.dep-sidebar{
+width: 350px;
+}
+.input{
+  padding: .4rem 1rem;
+  outline: none;
+width: 300px;
+
+}
+.input:focus{
+  outline: var(--purple) 2px solid;
+
+}
+.Employee-img{
+  position: relative;
+  // width:60%;
+  // height: 50%;
+  border: #535bf2 solid 2px;
+padding: .1rem;
+}
+
+
+
+.EmployeeCardBody{
+  // padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img-circle{
+  position: absolute;
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+  color: #535bf2;
+  top: 10%;
+  right: 10px;
+  // background: #fff;
+  padding: 5px;
+}
+.progress-value{
+  position: absolute;
+  top: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.TUC{
+  min-width: 250px !important;
+  max-width: 250px !important;
+
+  margin-top: 3rem;
+  padding-top: 4rem;
+  position: relative;
+}
+.img{
+  object-fit: cover;
+  object-position: center;
+}
+.TUC-img{
+  position: absolute;
+  top: -50px;
+  left: 30%;
+}
+.dp{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+}
+.chat{
+  width: 800px;
+}
+.receive{
+  width: 80%;
+}
+
+.send{
+  width: 80%;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+.chat-body{
+  overflow-y: scroll;
+  min-height: 85vh;
+  max-height: 85vh;
+display: flex;
+flex-direction: column-reverse;
+
+}
+
+.textarea {
+  display: block;
+  overflow: hidden;
+  min-height: 20px;
+  line-height: 20px;
+
+}
