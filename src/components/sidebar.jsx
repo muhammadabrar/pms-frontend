@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 const navigation = [
   {
@@ -91,6 +91,7 @@ const navigation = [
   },
 ];
 const Sidebar = () => {
+  const [dropdown, setdropdown] = useState(false);
   return (
     <div className="sidebar-content">
       <button className="bg-purple-100 p-2 flex items-center rounded-md text-left">
@@ -118,7 +119,12 @@ const Sidebar = () => {
 
       <div className="links">
         {navigation.map((item, i) => (
-          <div key={i} className="link-item" data-aos="fade-right" data-aos-delay={i*100} >
+          <div
+            key={i}
+            className="link-item"
+            data-aos="fade-right"
+            data-aos-delay={i * 100}
+          >
             <NavLink
               to={item.href}
               className={({ isActive, isPending }) =>
@@ -134,6 +140,96 @@ const Sidebar = () => {
             </NavLink>
           </div>
         ))}
+        <div className="link-item" data-aos="fade-right" data-aos-delay={navigation.length*100}>
+          <div
+            // to={"#"}
+            // className={({ isActive, isPending }) =>
+            //   isActive
+            //     ? "text-purple-800 font-bold hover:text-purple-800"
+            //     : "text-gray-500 hover:text-purple-800 font-bold"
+            // }
+            onClick={()=> setdropdown(!dropdown)}
+            className="text-gray-500 hover:text-purple-800 font-bold cursor-pointer"
+          >
+            <div className="flex items-center ">
+              <div className="pr-6 ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 4.5v15m7.5-7.5h-15"
+                  />
+                </svg>
+              </div>
+              Dropdown
+              <div className="pl-6 ">
+                {!dropdown ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                )}
+              </div>
+            </div>
+
+          </div>
+          {dropdown? <div className="dropdown ">
+          {navigation.map((item, i) => (
+          <div
+            key={i}
+            className="link-item " 
+            data-aos="fade-right"
+            data-aos-delay={i * 100}
+          >
+            <NavLink
+              to={item.href}
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? "text-purple-800 font-bold hover:text-purple-800"
+                  : "text-gray-500 hover:text-purple-800 font-bold"
+              }
+            >
+              <div className="flex items-center ">
+                <div className="pr-6 ">{item.icon}</div>
+                {item.name}
+              </div>
+            </NavLink>
+          </div>
+        ))}
+          </div>: null}
+        </div>
       </div>
     </div>
   );

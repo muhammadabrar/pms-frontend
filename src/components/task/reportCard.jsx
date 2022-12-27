@@ -13,7 +13,7 @@ const ReportCard = ({data, target, work}) => {
       </div>
       <div class="relative">
         <span
-          style={{ left: `${50 - 5}%` }}
+          style={{ left: `${Progress - 5}%` }}
           class="progress-value text-sm font-medium text-purple-200"
         >
           {Progress}%
@@ -22,7 +22,7 @@ const ReportCard = ({data, target, work}) => {
         <div class="w-full bg-gray-200 rounded-full h-1">
           <div
             class="bg-purple-600 h-1 rounded-full"
-            style={{ width: `${50}%` }}
+            style={{ width: `${Progress}%` }}
           ></div>
         </div>
       </div>

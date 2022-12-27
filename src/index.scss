@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 a {
   font-weight: 500;
   color: #646cff;
@@ -14,7 +14,7 @@ a:hover {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .card {
@@ -96,96 +96,98 @@ body {
 .link-item {
   margin: 2rem 0;
 }
-.welcome-img{
+
+.dropdown .link-item {
+  margin: 1rem 0;
+}
+.welcome-img {
   position: absolute;
-  top: -80%; 
+  top: -80%;
   right: 2rem;
 }
 
-.states{
+.states {
   margin: 4rem 0;
 }
 
 .btn {
-  @apply font-bold transition duration-300 ease-in-out py-2 px-4 rounded;
+  @apply font-bold transition duration-300 ease-in-out py-3 px-8 rounded;
 }
 
 .btn-sm {
-  @apply text-sm font-semibold transition duration-300 ease-in-out py-1 px-1 rounded;
+  @apply text-sm transition duration-300 ease-in-out py-2 px-2 rounded;
 }
-.btn-report{
+.btn-report {
   @apply bg-white border border-purple-400 text-purple-700;
-
 }
 .btn-purple {
   @apply bg-white text-gray-700;
 }
-.btn-report:hover, .btn-purple:hover {
+.btn-report:hover,
+.btn-purple:hover {
   @apply bg-purple-400 text-white hover:shadow-purple-500;
 }
-
-.radialBar{
+.dropdown {
+  margin-left: 1.5rem;
+}
+.radialBar {
   width: 100%;
 }
-.cardBody{
+.cardBody {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.dep-title{
+.dep-title {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 1; 
+  -webkit-line-clamp: 1;
   line-clamp: 1;
   width: max-content;
-min-width: min-content;
+  min-width: min-content;
   -webkit-box-orient: vertical;
 }
-.description-sm{
+.description-sm {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3; 
+  -webkit-line-clamp: 3;
   line-clamp: 3;
-min-width: min-content;
+  min-width: min-content;
   -webkit-box-orient: vertical;
 }
 
-.dep-sidebar{
-width: 350px;
+.dep-sidebar {
+  width: 350px;
 }
-.input{
-  padding: .4rem 1rem;
+.input {
+  padding: 0.4rem 1rem;
   outline: none;
-width: 300px;
-
+  width: 300px;
 }
-.input:focus{
+.input:focus {
   outline: var(--purple) 2px solid;
-
 }
-.Employee-img{
+.Employee-img {
   position: relative;
   // width:60%;
   // height: 50%;
   border: #535bf2 solid 2px;
-padding: .1rem;
+  padding: 0.1rem;
 }
 
-
-
-.EmployeeCardBody{
+.EmployeeCardBody {
   // padding-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.img-circle{
+.img-circle {
   position: absolute;
-  width: .8rem;
-  height: .8rem;
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 50%;
   color: #535bf2;
   top: 10%;
@@ -193,12 +195,12 @@ padding: .1rem;
   // background: #fff;
   padding: 5px;
 }
-.progress-value{
+.progress-value {
   position: absolute;
   top: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.TUC{
+.TUC {
   min-width: 250px !important;
   max-width: 250px !important;
 
@@ -206,40 +208,39 @@ padding: .1rem;
   padding-top: 4rem;
   position: relative;
 }
-.img{
+.img {
   object-fit: cover;
   object-position: center;
 }
-.TUC-img{
+.TUC-img {
   position: absolute;
   top: -50px;
   left: 30%;
 }
-.dp{
+.dp {
   width: 100px;
   height: 100px;
   object-fit: cover;
   object-position: center;
 }
-.chat{
+.chat {
   width: 800px;
 }
-.receive{
+.receive {
   width: 80%;
 }
 
-.send{
+.send {
   width: 80%;
   margin-left: auto;
   margin-right: 1rem;
 }
-.chat-body{
+.chat-body {
   overflow-y: scroll;
   min-height: 85vh;
   max-height: 85vh;
-display: flex;
-flex-direction: column-reverse;
-
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .textarea {
@@ -247,5 +248,51 @@ flex-direction: column-reverse;
   overflow: hidden;
   min-height: 20px;
   line-height: 20px;
+}
 
+.circle {
+  background-color: transparent;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  border: #fff solid 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.circle2 {
+  background-color: transparent;
+  border-radius: 50%;
+  width: 600px;
+  height: 600px;
+  border: #fff solid 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.input {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg   focus:outline-none focus:border-purple-500 w-full p-2.5;
+}
+
+
+.input.lg {
+  @apply block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:border-purple-500;
+}
+
+
+.input.sm {
+  @apply block w-full p-2 text-gray-900 border border-gray-300 rounded-lg 
+  bg-gray-50 sm:text-xs focus:outline-none focus:border-purple-500;
+}
+
+.input.err{
+  @apply border-red-500 focus:border-red-500;
 }

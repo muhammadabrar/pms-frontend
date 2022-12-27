@@ -1,7 +1,6 @@
-import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Outlet, Link, NavLink } from "react-router-dom";
+import { Fragment } from "react";
+import { Outlet } from "react-router-dom";
 import Sidebar from "./components/sidebar";
 const user = {
   name: localStorage.getItem("user"),
